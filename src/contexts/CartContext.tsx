@@ -123,7 +123,7 @@ const CartContext = createContext<{
 export const CartProvider = ({ children }: any) => {
   // const [cartState, cartDispatch] = useReducer(cartReducer, { cart: [] });
   // const [cartRecovered, setCartRecovered] = useState(false);
-  const [cartState, cartDispatch] = useReducer(cartReducer, { cart: getCartFromLocalStorage() });
+  const [cartState, cartDispatch] = useReducer(cartReducer, { cart: [] });
 
   // Recupere o carrinho do localStorage quando o componente for montado
   useEffect(() => {
